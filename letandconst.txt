@@ -1,0 +1,43 @@
+ES5 Global Constants
+
+var PI = 3.14;
+PI = 42;
+
+ES2015 Global Constants
+
+Using the "let" variable:
+
+let PI = 3.14;
+PI = 42; // I reassigned the value of PI with "let"
+
+console.log(PI); // Answer: 42
+
+You can reassign the variable of "let" at anytime after it has been declared, but you would get a Syntax Error if you tried to redeclare "let PI =".
+
+Using the "const" variable:
+
+const constant = {
+    PI: 3.14
+};
+
+constant.PI = 42;
+
+console.log(constant.PI); // Answer: 42
+
+You can achieve a similar result by creating an object with "PI: 3.14" inside and then changing the properties of the object while keeping the object itself constant. You cannot use "const PI = 3.14; PI = 42;" in the same way I used "let" because const variables can't be reassigned or redeclared.
+
+
+
+Quiz:
+
+Question 1: What is the difference between "var" and "let"?
+Answer: With "var" you can reassign and redeclare, whereas with "let" you can reassign but you can't redeclare. "Let" creates a block scope. With "var" you can access a hoisted variable.
+
+Question 2: What is the difference between "var" and "const"?
+Answer: With "var" you can reassign and redeclare, whereas with "const" you can't reassign nor redeclare. "Var" lets you access a hoisted variable and "const" creates a block scope.
+
+Question 3: What is the difference between "let" and "const"?
+Answer: With "let" you can reassign, but you can't redeclare. With "const" you can't reassign or redeclare.
+
+Question 4: What is hoisting?
+Answer: Hoisting is the way to describe how JavaScript compiling works. Variables are "hoisted" up to the top of the scope that they have been declared in. If you were to use "var" you would be able to access the variable name and it's undefined value before it get called at a later time. Function declarations are hoisted as well and can be called on before they are defined.
